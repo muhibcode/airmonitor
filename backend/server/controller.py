@@ -660,7 +660,7 @@ def resend():
             SET u.otp=$otp
             """
     graph.run(query1, user_id=user['user_id'], otp=otp)
-    msg = Message('App Verification Email', sender="tahirbaltee89@hotmail.com", recipients=[
+    msg = Message('App Verification Email', sender="", recipients=[
                   email],
                   body='Hi, ' + user['fname'] + ' Please Enter the One Time Password(OTP) in your app to verify your email' +
                   '\nYour OTP is '+str(otp))
@@ -686,7 +686,7 @@ def forgetPass():
             """
     graph.run(query1, user_id=user['user_id'], otp=otp)
 
-    msg = Message('App Verification Email', sender="tahirbaltee89@hotmail.com", recipients=[
+    msg = Message('App Verification Email', sender="", recipients=[
                   email],
                   body='Hi, ' + user['fname'] +
                   ' Please Enter the One Time Password(OTP) in your app to verify your email' +
@@ -791,7 +791,7 @@ def register():
             """
     graph.run(query, email=email, user_id='usr-neo-')
 
-    msg = Message('App Verification Email', sender="tahirbaltee89@hotmail.com",
+    msg = Message('App Verification Email', sender="",
                   recipients=[email],
                   body='Hi, ' + user['fname'] +
                   ' Please Enter the One Time Password(OTP) in your app to verify your email' +
